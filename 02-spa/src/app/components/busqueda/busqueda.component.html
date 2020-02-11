@@ -1,4 +1,15 @@
-<h1>Buscador <small>Marvel and DC</small></h1>
+<h1>Buscando: <small>{{termino.toUpperCase()}}</small></h1>
+<hr>
+
+<div class="row animated fadeIn fast" *ngIf="heroes.length == 0">
+    <div class="col-md-12">
+        <div class="alert aletr alert-info" role="alert">
+            No existen resultados para el termino: {{termino}}
+
+        </div>
+
+    </div>
+</div>
 
 <hr>
 <div class='card-columns'>
