@@ -15,6 +15,7 @@ import { APP_ROUTING } from './app.routes';
 import { HeroesService } from './services/heroes.service';
 import { HeroeComponent } from './components/heroe/heroe.component';
 import { BusquedaComponent } from './components/busqueda/busqueda.component';
+import { TarjetaComponent } from './components/tarjeta/tarjeta.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { BusquedaComponent } from './components/busqueda/busqueda.component';
     AboutComponent,
     HeroesComponent,
     HeroeComponent,
-    BusquedaComponent
+    BusquedaComponent,
+    TarjetaComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { HeroesService } from '../../services/heroes.service';
 
@@ -9,7 +9,8 @@ import { HeroesService } from '../../services/heroes.service';
 })
 export class HeroeComponent {
 
-  heroe: any = {};
+  @Input() heroe: any = {};
+
 
   constructor( private activatedRoute: ActivatedRoute, private _heroesService: HeroesService ) {
     this.activatedRoute.params.subscribe( params => {
@@ -17,5 +18,4 @@ export class HeroeComponent {
       this.heroe = this._heroesService.getHeroe( params['id'] );
     });
    }
-
 }
